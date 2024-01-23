@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eodhp-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eodhp-website
+  template:
+    metadata:
+      labels:
+        app: eodhp-website
+    spec:
+      containers:
+        - name: eodhp-website
+          image: hcollingwoodtpz/eodhp_website:0.1.0
+          ports:
+            - containerPort: 8000
+          env:
+            - name: APP_URL
+              value: https://eodhp-website.test.com
+#            - name: DB_HOST
+#              value: mysql-service
+#            - name: DB_PORT
+#              value: "3306"
+#            - name: DB_DATABASE
+#              value: bookstack
+#            - name: DB_USER
+#              value: db_user
+#            - name: DB_PASS
+#              value: password
