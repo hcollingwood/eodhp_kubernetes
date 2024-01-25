@@ -4,8 +4,9 @@ metadata:
   name: postgres-service
 spec:
   selector:
-    app: postgres
+    app: eodhp-website-database
   ports:
     - protocol: TCP
       port: 5432
       targetPort: 5432
+  clusterIP: None
