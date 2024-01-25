@@ -20,13 +20,13 @@ spec:
           env:
             - name: APP_URL
               value: https://eodhp-website.test.com
-#            - name: DB_HOST
-#              value: mysql-service
-#            - name: DB_PORT
-#              value: "3306"
-#            - name: DB_DATABASE
-#              value: bookstack
-#            - name: DB_USER
+            - name: SQL_HOST
+              value: postgres-service
+            - name: SQL_PORT
+              value: "5432"
+            - name: SQL_DATABASE
+              value: website_db
+#            - name: SQL_USER
 #              value: db_user
-#            - name: DB_PASS
+#            - name: SQL_PASSWORD
 #              value: password
